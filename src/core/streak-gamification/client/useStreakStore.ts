@@ -22,13 +22,13 @@ interface StreakState {
 export const useStreakStore = create<StreakState>()(
   persist(
     (set, get) => ({
-      currentStreak: 5,
-      bestStreak: 7,
+      currentStreak: 0,
+      bestStreak: 0,
       lastActiveDate: null,
       dailyGoalTarget: 25,
-      dailyAnsweredCount: 15,
-      levelXp: 350,
-      totalAnswered: 48,
+      dailyAnsweredCount: 0,
+      levelXp: 0,
+      totalAnswered: 0,
 
       recordActivity: (isCorrect: boolean) => {
         const state = get();

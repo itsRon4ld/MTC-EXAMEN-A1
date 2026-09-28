@@ -10,7 +10,7 @@ interface AuthViewProps {
 }
 
 export const AuthView: React.FC<AuthViewProps> = ({ onSuccess, onCancel, isModal = false }) => {
-  const [mode, setMode] = useState<'login' | 'register'>('login');
+  const [mode, setMode] = useState<'login' | 'register'>('register');
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -44,7 +44,11 @@ export const AuthView: React.FC<AuthViewProps> = ({ onSuccess, onCancel, isModal
         if (res.error) {
           setError(res.error.message || 'Error al crear la cuenta. Intenta de nuevo.');
         } else {
-          if (onSuccess) onSuccess();
+          if (onSuccess) {
+            onSuccess();
+          } else {
+            window.location.href = '/';
+          }
         }
       } else {
         const res = await signIn.email({
@@ -55,7 +59,11 @@ export const AuthView: React.FC<AuthViewProps> = ({ onSuccess, onCancel, isModal
         if (res.error) {
           setError(res.error.message || 'Credenciales inválidas. Verifica tu correo y contraseña.');
         } else {
-          if (onSuccess) onSuccess();
+          if (onSuccess) {
+            onSuccess();
+          } else {
+            window.location.href = '/';
+          }
         }
       }
     } catch (err: any) {
