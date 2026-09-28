@@ -9,20 +9,24 @@ export const metadata = {
 
 export default function LoginPage() {
   return (
-    <div className="app-shell min-h-screen flex flex-col justify-between">
-      <div className="p-4 flex items-center justify-between border-b border-white/5">
-        <Link href="/" className="screen-kicker text-sm font-bold text-slate-400 hover:text-white">
-          ← Volver al inicio
+    <div className="app-shell" style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+      <header className="screen-head" style={{ padding: '16px 20px', borderBottom: '1px solid color-mix(in oklch, var(--accent-on) 6%, transparent)', margin: 0 }}>
+        <Link href="/" className="screen-kicker" style={{ fontSize: 12 }}>
+          ← Volver
         </Link>
-        <span className="micro text-[10px] text-emerald-400 font-mono">BETTER-AUTH // SECURE</span>
-      </div>
+        <span className="micro" style={{ color: 'var(--success)' }}>
+          MTC A-1 OFICIAL
+        </span>
+      </header>
 
-      <main className="app-main flex-1 flex items-center justify-center">
+      <main className="app-main" style={{ display: 'grid', placeItems: 'center', padding: '20px 16px 40px' }}>
         <AuthView />
       </main>
 
-      <footer className="p-4 text-center text-xs text-slate-600 border-t border-white/5 font-mono">
-        MTC CLASE A - CATEGORÍA I · 200 PREGUNTAS OFICIALES
+      <footer style={{ padding: '16px', textAlign: 'center', borderTop: '1px solid color-mix(in oklch, var(--accent-on) 6%, transparent)' }}>
+        <span className="micro" style={{ fontSize: 11 }}>
+          MTC CLASE A - CATEGORÍA I · 200 PREGUNTAS
+        </span>
       </footer>
     </div>
   );
