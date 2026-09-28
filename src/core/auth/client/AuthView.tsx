@@ -79,17 +79,17 @@ export const AuthView: React.FC<AuthViewProps> = ({ onSuccess, onCancel, isModal
   };
 
   const containerClasses = isModal
-    ? 'fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md'
-    : 'w-full max-w-[440px] mx-auto py-6';
+    ? 'fixed inset-0 z-50 flex items-center justify-center p-3 bg-black/80 backdrop-blur-md'
+    : 'w-full max-w-[400px] mx-auto py-2';
 
   return (
     <div className={containerClasses}>
-      <div className="panel glass relative" style={{ padding: '32px 24px', borderRadius: 'var(--radius-lg)' }}>
+      <div className="panel glass relative" style={{ padding: '20px 18px', borderRadius: 'var(--radius-lg)' }}>
         {onCancel && (
           <button
             type="button"
             onClick={onCancel}
-            className="icon-btn absolute top-4 right-4"
+            className="icon-btn absolute top-3 right-3"
             aria-label="Cerrar modal"
           >
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -99,16 +99,16 @@ export const AuthView: React.FC<AuthViewProps> = ({ onSuccess, onCancel, isModal
         )}
 
         {/* Brand Header */}
-        <header style={{ textAlign: 'center', marginBottom: 24 }}>
+        <header style={{ textAlign: 'center', marginBottom: 16 }}>
           <div
             style={{
-              width: 80,
-              height: 80,
-              margin: '0 auto 14px',
-              borderRadius: '22px',
+              width: 62,
+              height: 62,
+              margin: '0 auto 10px',
+              borderRadius: '16px',
               overflow: 'hidden',
-              boxShadow: '0 8px 24px color-mix(in oklch, var(--success) 35%, transparent)',
-              border: '2px solid color-mix(in oklch, var(--success) 50%, transparent)',
+              boxShadow: '0 6px 20px color-mix(in oklch, var(--success) 35%, transparent)',
+              border: '1.5px solid color-mix(in oklch, var(--success) 50%, transparent)',
             }}
           >
             <img
@@ -118,10 +118,10 @@ export const AuthView: React.FC<AuthViewProps> = ({ onSuccess, onCancel, isModal
             />
           </div>
           <div className="screen-kicker">MTC-EXAM A-1 · PERÚ</div>
-          <h1 className="screen-title" style={{ fontSize: 26, marginTop: 4 }}>
+          <h1 className="screen-title" style={{ fontSize: 22, marginTop: 2 }}>
             {mode === 'register' ? 'Crear Cuenta' : 'Iniciar Sesión'}
           </h1>
-          <p className="muted" style={{ fontSize: 13, marginTop: 4, margin: '4px 0 0' }}>
+          <p className="muted" style={{ fontSize: 11.5, marginTop: 2, margin: '2px 0 0' }}>
             {mode === 'register'
               ? 'Regístrate para guardar tu racha y simulacros'
               : 'Accede a tu progreso y banco de errores'}
@@ -133,9 +133,9 @@ export const AuthView: React.FC<AuthViewProps> = ({ onSuccess, onCancel, isModal
           style={{
             display: 'grid',
             gridTemplateColumns: '1fr 1fr',
-            gap: 6,
-            padding: 6,
-            marginBottom: 24,
+            gap: 4,
+            padding: 4,
+            marginBottom: 16,
             borderRadius: 'var(--radius-pill)',
             background: 'color-mix(in oklch, var(--accent-on) 6%, transparent)',
             border: '1px solid color-mix(in oklch, var(--accent-on) 12%, transparent)',
@@ -149,19 +149,19 @@ export const AuthView: React.FC<AuthViewProps> = ({ onSuccess, onCancel, isModal
               setError(null);
             }}
             style={{
-              minHeight: 48,
+              minHeight: 40,
               border: 0,
               borderRadius: 'var(--radius-pill)',
               background: mode === 'register' ? 'var(--success)' : 'transparent',
               color: mode === 'register' ? 'var(--fg)' : 'var(--muted)',
               fontFamily: 'var(--font-mono)',
-              fontSize: 13,
+              fontSize: 11.5,
               fontWeight: 800,
               letterSpacing: '0.04em',
               textTransform: 'uppercase',
               cursor: 'pointer',
               transition: 'all 0.2s ease',
-              boxShadow: mode === 'register' ? '0 4px 14px color-mix(in oklch, var(--success) 40%, transparent)' : 'none',
+              boxShadow: mode === 'register' ? '0 3px 12px color-mix(in oklch, var(--success) 40%, transparent)' : 'none',
             }}
           >
             Registrarse
@@ -174,19 +174,19 @@ export const AuthView: React.FC<AuthViewProps> = ({ onSuccess, onCancel, isModal
               setError(null);
             }}
             style={{
-              minHeight: 48,
+              minHeight: 40,
               border: 0,
               borderRadius: 'var(--radius-pill)',
               background: mode === 'login' ? 'var(--success)' : 'transparent',
               color: mode === 'login' ? 'var(--fg)' : 'var(--muted)',
               fontFamily: 'var(--font-mono)',
-              fontSize: 13,
+              fontSize: 11.5,
               fontWeight: 800,
               letterSpacing: '0.04em',
               textTransform: 'uppercase',
               cursor: 'pointer',
               transition: 'all 0.2s ease',
-              boxShadow: mode === 'login' ? '0 4px 14px color-mix(in oklch, var(--success) 40%, transparent)' : 'none',
+              boxShadow: mode === 'login' ? '0 3px 12px color-mix(in oklch, var(--success) 40%, transparent)' : 'none',
             }}
           >
             Ingresar
@@ -197,16 +197,16 @@ export const AuthView: React.FC<AuthViewProps> = ({ onSuccess, onCancel, isModal
         {error && (
           <div
             style={{
-              padding: '12px 14px',
-              marginBottom: 18,
+              padding: '10px 12px',
+              marginBottom: 14,
               borderRadius: 'var(--radius-md)',
               background: 'color-mix(in oklch, var(--danger) 16%, transparent)',
               border: '1px solid color-mix(in oklch, var(--danger) 45%, transparent)',
               color: 'var(--danger)',
-              fontSize: 13,
+              fontSize: 11.5,
               display: 'flex',
               alignItems: 'center',
-              gap: 8,
+              gap: 6,
             }}
           >
             <span>⚠️</span>
@@ -215,13 +215,13 @@ export const AuthView: React.FC<AuthViewProps> = ({ onSuccess, onCancel, isModal
         )}
 
         {/* Auth Form */}
-        <form onSubmit={handleSubmit} className="stack" style={{ gap: 16 }}>
+        <form onSubmit={handleSubmit} className="stack" style={{ gap: 12 }}>
           {mode === 'register' && (
             <div>
-              <label className="screen-kicker" style={{ display: 'block', marginBottom: 6, fontSize: 11 }}>
+              <label className="screen-kicker" style={{ display: 'block', marginBottom: 4, fontSize: 10 }}>
                 Nombre del Conductor
               </label>
-              <div className="search" style={{ minHeight: 52 }}>
+              <div className="search" style={{ minHeight: 44 }}>
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
                   <circle cx="12" cy="8" r="4" />
                   <path d="M4.5 21a7.5 7.5 0 0 1 15 0" />
@@ -233,17 +233,17 @@ export const AuthView: React.FC<AuthViewProps> = ({ onSuccess, onCancel, isModal
                   onChange={(e) => setName(e.target.value)}
                   required={mode === 'register'}
                   autoComplete="name"
-                  style={{ fontSize: 15 }}
+                  style={{ fontSize: 13 }}
                 />
               </div>
             </div>
           )}
 
           <div>
-            <label className="screen-kicker" style={{ display: 'block', marginBottom: 6, fontSize: 11 }}>
+            <label className="screen-kicker" style={{ display: 'block', marginBottom: 4, fontSize: 10 }}>
               Correo Electrónico
             </label>
-            <div className="search" style={{ minHeight: 52 }}>
+            <div className="search" style={{ minHeight: 44 }}>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
                 <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
                 <polyline points="22,6 12,13 2,6" />
@@ -255,16 +255,16 @@ export const AuthView: React.FC<AuthViewProps> = ({ onSuccess, onCancel, isModal
                 onChange={(e) => setEmail(e.target.value)}
                 required
                 autoComplete="email"
-                style={{ fontSize: 15 }}
+                style={{ fontSize: 13 }}
               />
             </div>
           </div>
 
           <div>
-            <label className="screen-kicker" style={{ display: 'block', marginBottom: 6, fontSize: 11 }}>
+            <label className="screen-kicker" style={{ display: 'block', marginBottom: 4, fontSize: 10 }}>
               Contraseña
             </label>
-            <div className="search" style={{ minHeight: 52 }}>
+            <div className="search" style={{ minHeight: 44 }}>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
                 <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
                 <path d="M7 11V7a5 5 0 0 1 10 0v4" />
@@ -276,7 +276,7 @@ export const AuthView: React.FC<AuthViewProps> = ({ onSuccess, onCancel, isModal
                 onChange={(e) => setPassword(e.target.value)}
                 required
                 autoComplete={mode === 'register' ? 'new-password' : 'current-password'}
-                style={{ fontSize: 15 }}
+                style={{ fontSize: 13 }}
               />
             </div>
           </div>
@@ -285,7 +285,7 @@ export const AuthView: React.FC<AuthViewProps> = ({ onSuccess, onCancel, isModal
             type="submit"
             disabled={loading}
             className="action"
-            style={{ marginTop: 8, minHeight: 56, fontSize: 15 }}
+            style={{ marginTop: 6, minHeight: 48, fontSize: 13 }}
           >
             {loading ? (
               'Procesando...'
