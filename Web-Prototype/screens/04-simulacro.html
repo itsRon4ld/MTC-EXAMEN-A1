@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>MTC-EXAM · Simulacro</title>
+  <link rel="stylesheet" href="app.css">
+</head>
+<body>
+  <div class="app-shell">
+    <main class="app-main quiz-main">
+      <header class="screen-head" data-od-id="exam-header">
+        <a class="icon-btn" href="01-dashboard.html" aria-label="Salir del simulacro"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 6 12 12M18 6 6 18"/></svg></a>
+        <div style="text-align:center"><div class="screen-kicker">Simulacro oficial</div><strong class="num">12 / 50</strong></div>
+        <div class="timer"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l3 2M9 2h6"/></svg><span>39:12</span></div>
+      </header>
+
+      <section class="panel glass exam-card" data-od-id="exam-question">
+        <div class="row-between" style="margin-bottom:12px"><span class="category">Pregunta 12</span><button class="icon-btn" aria-label="Marcar para revisar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 3v18M6 4h11l-2 4 2 4H6"/></svg></button></div>
+        <h1 class="exam-question">El contenido oficial de la pregunta aparecerá aquí.</h1>
+        <div class="answers">
+          <div><input class="answer-input" id="e1" name="exam" type="radio"><label class="answer" for="e1"><span class="answer-key">A</span><span>Alternativa A</span></label></div>
+          <div><input class="answer-input" id="e2" name="exam" type="radio" checked><label class="answer" for="e2"><span class="answer-key">B</span><span>Alternativa seleccionada</span></label></div>
+          <div><input class="answer-input" id="e3" name="exam" type="radio"><label class="answer" for="e3"><span class="answer-key">C</span><span>Alternativa C</span></label></div>
+          <div><input class="answer-input" id="e4" name="exam" type="radio"><label class="answer" for="e4"><span class="answer-key">D</span><span>Alternativa D</span></label></div>
+        </div>
+      </section>
+
+      <section class="panel glass" data-od-id="question-navigator">
+        <div class="row-between" style="margin-bottom:14px"><h2 class="section-label" style="margin:0">Navegador</h2><span class="micro">11 respondidas</span></div>
+        <div class="exam-legend"><span class="legend-item"><i class="legend-dot done"></i>Respondida</span><span class="legend-item"><i class="legend-dot flag"></i>Marcada</span><span class="legend-item"><i class="legend-dot"></i>Vacía</span></div>
+        <div class="question-grid" aria-label="Preguntas 1 a 50">
+          <span class="q-cell done">1</span><span class="q-cell done">2</span><span class="q-cell done">3</span><span class="q-cell done">4</span><span class="q-cell flag">5</span><span class="q-cell done">6</span><span class="q-cell done">7</span><span class="q-cell done">8</span><span class="q-cell done">9</span><span class="q-cell done">10</span>
+          <span class="q-cell done">11</span><span class="q-cell current">12</span><span class="q-cell">13</span><span class="q-cell">14</span><span class="q-cell">15</span><span class="q-cell">16</span><span class="q-cell">17</span><span class="q-cell">18</span><span class="q-cell">19</span><span class="q-cell">20</span>
+          <span class="q-cell">21</span><span class="q-cell">22</span><span class="q-cell">23</span><span class="q-cell">24</span><span class="q-cell">25</span><span class="q-cell">26</span><span class="q-cell">27</span><span class="q-cell">28</span><span class="q-cell">29</span><span class="q-cell">30</span>
+          <span class="q-cell">31</span><span class="q-cell">32</span><span class="q-cell">33</span><span class="q-cell">34</span><span class="q-cell">35</span><span class="q-cell">36</span><span class="q-cell">37</span><span class="q-cell">38</span><span class="q-cell">39</span><span class="q-cell">40</span>
+          <span class="q-cell">41</span><span class="q-cell">42</span><span class="q-cell">43</span><span class="q-cell">44</span><span class="q-cell">45</span><span class="q-cell">46</span><span class="q-cell">47</span><span class="q-cell">48</span><span class="q-cell">49</span><span class="q-cell">50</span>
+        </div>
+      </section>
+    </main>
+    <div class="sticky-action"><a class="action" href="05-resultados.html">Finalizar simulacro</a></div>
+  </div>
+</body>
+</html>

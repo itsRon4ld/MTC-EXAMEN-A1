@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>MTC-EXAM · Banco de errores</title>
+  <link rel="stylesheet" href="app.css">
+</head>
+<body>
+  <div class="app-shell">
+    <main class="app-main">
+      <header class="screen-head" data-od-id="errors-header">
+        <div><div class="screen-kicker">Puntos débiles</div><h1 class="screen-title">Banco de errores</h1></div>
+        <div class="telemetry-chip lives"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 6 12 12M18 6 6 18"/></svg><span class="num">—</span></div>
+      </header>
+
+      <section class="panel glass" data-od-id="review-queue" style="margin-bottom:24px">
+        <div class="row-between" style="margin-bottom:16px"><span class="category">Repaso espaciado</span><span class="micro">Cola pendiente</span></div>
+        <h2 class="section-label" style="font-size:24px">Convierte cada error en una respuesta dominada.</h2>
+        <p class="muted" style="margin:8px 0 16px;font-size:13px">Las preguntas falladas aparecerán aquí después de tu primera sesión con el banco oficial.</p>
+        <div class="progress-track" style="height:10px"><div class="progress-fill" style="width:0%"></div></div>
+      </section>
+
+      <section data-od-id="error-categories">
+        <div class="row-between" style="margin-bottom:12px"><h2 class="section-label" style="margin:0">Por reforzar</h2><span class="micro">Por categoría</span></div>
+        <div class="mode-list">
+          <a class="mode-card glass" href="02-quiz.html"><span class="mode-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3 3 20h18L12 3Z"/><path d="M12 9v5M12 17h.01"/></svg></span><span class="mode-copy"><strong>Señales</strong><span>Errores y señales aún no dominadas.</span></span><span class="badge">—</span></a>
+          <a class="mode-card glass" href="02-quiz.html"><span class="mode-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 18 9 6l3 12 3-12 5 12"/></svg></span><span class="mode-copy"><strong>Prioridades</strong><span>Cruces, giros y derecho de paso.</span></span><span class="badge">—</span></a>
+          <a class="mode-card glass" href="02-quiz.html"><span class="mode-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M7 13h10M9 9h6"/></svg></span><span class="mode-copy"><strong>Velocidades</strong><span>Límites y condiciones de la vía.</span></span><span class="badge">—</span></a>
+        </div>
+      </section>
+
+      <section style="margin-top:20px" data-od-id="error-action"><a class="action" href="02-quiz.html">Iniciar repaso</a></section>
+    </main>
+
+    <nav class="bottom-nav" aria-label="Navegación principal">
+      <a class="nav-item" href="01-dashboard.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m13 2-8 12h6l-1 8 9-13h-6V2Z"/></svg><span>Entrenar</span></a>
+      <a class="nav-item" href="04-simulacro.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l3 2M9 2h6"/></svg><span>Simulacro</span></a>
+      <a class="nav-item active" href="06-errores.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m7 7 10 10M17 7 7 17"/></svg><span>Errores</span></a>
+      <a class="nav-item" href="06-balotario.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 5.5A3.5 3.5 0 0 1 7.5 2H11v17H7.5A3.5 3.5 0 0 0 4 22zM20 5.5A3.5 3.5 0 0 0 16.5 2H13v17h3.5A3.5 3.5 0 0 1 20 22z"/></svg><span>Balotario</span></a>
+      <a class="nav-item" href="07-perfil.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="4"/><path d="M4.5 21a7.5 7.5 0 0 1 15 0"/></svg><span>Perfil</span></a>
+    </nav>
+  </div>
+</body>
+</html>

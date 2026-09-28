@@ -1,0 +1,19 @@
+{
+  "name": "MTC-EXAM A-1 · Balotario y Simulacro Oficial Perú",
+  "short_name": "MTC Exam A-1",
+  "description": "Entrenamiento gamificado, simulacro oficial de 50 preguntas y banco de errores con las 200 preguntas oficiales del MTC.",
+  "start_url": "/",
+  "id": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "orientation": "portrait-primary",
+  "categories": ["education", "utilities"],
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    }
+  ]
+}

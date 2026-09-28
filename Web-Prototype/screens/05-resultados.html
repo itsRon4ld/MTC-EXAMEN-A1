@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>MTC-EXAM · Resultado</title>
+  <link rel="stylesheet" href="app.css">
+</head>
+<body>
+  <div class="app-shell">
+    <main class="app-main">
+      <header class="screen-head" data-od-id="result-header">
+        <a class="icon-btn" href="01-dashboard.html" aria-label="Volver al inicio"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 18-6-6 6-6"/></svg></a>
+        <span class="screen-kicker">Resultado oficial</span>
+        <span style="width:44px"></span>
+      </header>
+
+      <section class="result-hero" data-od-id="result-verdict">
+        <div class="result-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 4 4L19 6"/></svg></div>
+        <h1>¡Aprobado!</h1>
+        <p>Superaste el mínimo de 40 respuestas correctas.</p>
+      </section>
+
+      <section class="score-panel" data-od-id="score-summary">
+        <div class="score-stat"><strong class="num">43 / 50</strong><span>Correctas</span></div>
+        <div class="score-stat"><strong class="num">86%</strong><span>Puntaje</span></div>
+        <div class="score-stat"><strong class="num">—</strong><span>Tiempo</span></div>
+      </section>
+
+      <section class="panel glass" data-od-id="result-breakdown">
+        <div class="row-between" style="margin-bottom:6px"><h2 class="section-label" style="margin:0">Resumen</h2><span class="category">Nivel aprobado</span></div>
+        <div class="review-row"><strong>Respuestas correctas</strong><span style="color:var(--success)">43</span></div>
+        <div class="review-row"><strong>Preguntas por repasar</strong><span style="color:var(--danger)">7</span></div>
+        <div class="review-row"><strong>Preguntas marcadas</strong><span>—</span></div>
+      </section>
+
+      <section class="stack" style="margin-top:16px" data-od-id="result-actions">
+        <a class="action" href="02-quiz.html">Repasar las 7 falladas</a>
+        <a class="action secondary" href="01-dashboard.html">Volver a entrenar</a>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
+
