@@ -4,12 +4,18 @@ import { QueryProvider } from '@/core/shared/client/QueryProvider';
 import { AppShell } from '@/core/shared/client/AppShell';
 
 export const metadata: Metadata = {
-  title: 'MTC-EXAM · Balotario Oficial Clase A-I',
+  title: 'MTC-EXAM A-1 · Balotario y Simulacro Oficial Perú',
   description: 'Aplicación interactiva y gamificada para aprender las 200 preguntas y aprobar el examen oficial MTC de conducir.',
   manifest: '/manifest.json',
   icons: {
-    icon: '/favicon.ico',
-    apple: '/icons/icon-192.png',
+    icon: [
+      { url: '/favicon.ico' },
+      { url: '/favicon.png', sizes: '64x64', type: 'image/png' },
+      { url: '/icons/icon-192.png', sizes: '192x192', type: 'image/png' },
+    ],
+    apple: [
+      { url: '/icons/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
   },
 };
 

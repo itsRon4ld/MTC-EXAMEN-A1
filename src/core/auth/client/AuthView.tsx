@@ -102,23 +102,20 @@ export const AuthView: React.FC<AuthViewProps> = ({ onSuccess, onCancel, isModal
         <header style={{ textAlign: 'center', marginBottom: 24 }}>
           <div
             style={{
-              width: 56,
-              height: 56,
+              width: 80,
+              height: 80,
               margin: '0 auto 14px',
-              borderRadius: '50%',
-              background: 'color-mix(in oklch, var(--success) 16%, transparent)',
-              border: '1px solid color-mix(in oklch, var(--success) 45%, transparent)',
-              display: 'grid',
-              placeItems: 'center',
-              color: 'var(--success)',
+              borderRadius: '22px',
+              overflow: 'hidden',
+              boxShadow: '0 8px 24px color-mix(in oklch, var(--success) 35%, transparent)',
+              border: '2px solid color-mix(in oklch, var(--success) 50%, transparent)',
             }}
           >
-            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" strokeWidth="2">
-              <path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.5 2.8C2.1 10.9 2 11.2 2 11.5V16c0 .6.4 1 1 1h2" />
-              <circle cx="7" cy="17" r="2" />
-              <path d="M9 17h6" />
-              <circle cx="17" cy="17" r="2" />
-            </svg>
+            <img
+              src="/logo.png"
+              alt="MTC-EXAM A-1 Logo"
+              style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+            />
           </div>
           <div className="screen-kicker">MTC-EXAM A-1 · PERÚ</div>
           <h1 className="screen-title" style={{ fontSize: 26, marginTop: 4 }}>
