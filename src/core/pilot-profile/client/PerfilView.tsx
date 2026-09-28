@@ -49,8 +49,10 @@ export const PerfilView: React.FC = () => {
 
   const handleSignOut = async () => {
     soundFx.playClick();
+    useStreakStore.getState().resetToZero();
+    useErrorBankStore.getState().clearAllErrors();
     await signOut();
-    router.push('/login');
+    window.location.href = '/login';
   };
 
   const handleSelectGoal = (target: number) => {

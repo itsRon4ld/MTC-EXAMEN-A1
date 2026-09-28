@@ -71,7 +71,11 @@ export const useErrorBankStore = create<ErrorBankState>()(
       },
     }),
     {
-      name: 'mtc-error-bank-storage',
+      name: 'mtc-error-bank-storage-v2',
+      version: 2,
+      migrate: () => ({
+        errors: {},
+      }),
     }
   )
 );

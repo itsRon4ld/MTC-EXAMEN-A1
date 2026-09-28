@@ -17,6 +17,7 @@ interface StreakState {
   recordActivity: (isCorrect: boolean) => void;
   setDailyGoalTarget: (target: number) => void;
   resetDailyCountIfNeeded: () => void;
+  resetToZero: () => void;
 }
 
 export const useStreakStore = create<StreakState>()(
@@ -65,9 +66,31 @@ export const useStreakStore = create<StreakState>()(
           set({ dailyAnsweredCount: 0 });
         }
       },
+
+      resetToZero: () => {
+        set({
+          currentStreak: 0,
+          bestStreak: 0,
+          lastActiveDate: null,
+          dailyGoalTarget: 25,
+          dailyAnsweredCount: 0,
+          levelXp: 0,
+          totalAnswered: 0,
+        });
+      },
     }),
     {
-      name: 'mtc-user-streak-storage',
+      name: 'mtc-user-streak-storage-v2',
+      version: 2,
+      migrate: () => ({
+        currentStreak: 0,
+        bestStreak: 0,
+        lastActiveDate: null,
+        dailyGoalTarget: 25,
+        dailyAnsweredCount: 0,
+        levelXp: 0,
+        totalAnswered: 0,
+      }),
     }
   )
 );

@@ -38,7 +38,13 @@ export const useCodexStore = create<CodexState>()(
       isFavorite: (questionId: number) => !!get().favorites[questionId],
     }),
     {
-      name: 'mtc-codex-storage',
+      name: 'mtc-codex-storage-v2',
+      version: 2,
+      migrate: () => ({
+        searchTerm: '',
+        activeFilter: 'all',
+        favorites: {},
+      }),
     }
   )
 );
